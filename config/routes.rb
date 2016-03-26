@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
-     resources :posts
+  resources :advertisements
+  resources :posts
 
      get 'about' => 'welcome#about'
 
-root 'welcome#index'
+     root to: 'welcome#index'
 end
 
   # The priority is based upon order of creation: first created -> highest priority.

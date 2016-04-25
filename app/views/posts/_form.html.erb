@@ -16,6 +16,9 @@
     <%= f.label :title %>
      <%= f.text_field :title, class: 'form-control', placeholder: "Enter post title" %>
      <% end %>
+     <div class="form-group">
+     <%= render partial: 'labels/form', locals: { f: f, topic: @topic, labels: @post.labels } %>
+   </div>
       # #9
        <%= form_group_tag(post.errors[:body]) do %>
     <%= f.label :body %>
